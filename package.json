@@ -1,6 +1,6 @@
 {
   "name": "@permettezmoideconstruire/react-ive",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Reusable DOM interractions for React, exposed as common patterns",
   "source": "src/react-ive.js",
   "main": "dist/react-ive.js",
