@@ -4,7 +4,7 @@
   "description": "Reusable DOM interractions for React, exposed as common patterns",
   "source": "src/react-ive.js",
   "main": "dist/react-ive.js",
-  "module": "dist/react-ive.mjs",
+  "module": "dist/react-ive.modern.js",
   "unpkg": "dist/react-ive.umd.js",
   "repository": "git@github.com:permettez-moi-de-construire/react-ive.git",
   "author": "Cyril CHAPON <cyril@permettezmoideconstruire.fr>",
@@ -15,8 +15,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "microbundle",
+    "build": "yarn clean && yarn compile",
+    "compile": "microbundle",
     "dev": "microbundle watch",
+    "clean": "shx rm -rf dist",
     "test": "mocha --require @babel/register --require ./test/bootstrap",
     "lint": "standard --verbose | snazzy"
   },
@@ -35,6 +37,7 @@
     "mocha": "^6.2.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "shx": "^0.3.2",
     "snazzy": "^8.0.0",
     "standard": "^14.3.1"
   },
