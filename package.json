@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Reusable DOM interractions for React, exposed as common patterns",
   "source": "src/react-ive.js",
-  "main": "dist/react-ive.js",
+  "main": "dist/react-ive.umd.js",
   "module": "dist/react-ive.modern.js",
   "unpkg": "dist/react-ive.umd.js",
   "repository": "git@github.com:permettez-moi-de-construire/react-ive.git",
@@ -16,8 +16,8 @@
   ],
   "scripts": {
     "build": "yarn clean && yarn compile",
-    "compile": "microbundle",
-    "dev": "microbundle watch",
+    "compile": "microbundle --jsx React.createElement --external react",
+    "dev": "microbundle watch --jsx React.createElement --external react",
     "clean": "shx rm -rf dist",
     "test": "mocha --require @babel/register --require ./test/bootstrap",
     "lint": "standard --verbose | snazzy"
